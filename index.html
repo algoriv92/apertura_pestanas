@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrir Herramientas</title>
+    <title>Abriendo herramientas...</title>
     <script>
-        function abrirPestanas() {
+        function abrirPestanasYCerrar() {
             var urls = [
                 'https://mail.google.com', 
                 'https://docs.google.com/spreadsheets/d/1kHSHzH91h1FdOZcBtqn6zRG6WVfN1ndF3AyD_UMKkPM/', 
@@ -13,13 +13,21 @@
                 'https://drive.google.com/drive/u/0/folders/1C8kkC0_58T_TIBDeCcf2xykEwE0DIixn', 
                 'https://kevo.live-03.platform.bbva.com/login'
             ];
+            
+            // Abre todas las pestañas
             urls.forEach(url => window.open(url, '_blank'));
+
+            // Intenta cerrar la página actual
+            setTimeout(() => {
+                window.open('', '_self', '');
+                window.close();
+            }, 1000);
         }
     </script>
 </head>
-<body onload="abrirPestanas()">
+<body onload="abrirPestanasYCerrar()">
     <h2>Abriendo herramientas...</h2>
     <p>Si las pestañas no se abren automáticamente, haz clic en el botón:</p>
-    <button onclick="abrirPestanas()">Abrir pestañas</button>
+    <button onclick="abrirPestanasYCerrar()">Abrir pestañas</button>
 </body>
 </html>
