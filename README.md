@@ -1,1 +1,1 @@
-*Script que ha sido desarrollado con fines de proyecto*
+#Script que ha sido desarrollado con fines de proyecto.
