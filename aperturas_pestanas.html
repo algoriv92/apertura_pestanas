@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Herramientas</title>
+    <script>
+        function abrirPestanas() {
+            var urls = [
+                'https://mail.google.com', 
+                'https://docs.google.com/spreadsheets/d/1kHSHzH91h1FdOZcBtqn6zRG6WVfN1ndF3AyD_UMKkPM/', 
+                'https://docs.google.com/spreadsheets/d/1bcphGG5uAKTvYR3WEqG1O3rs9n1niVaDmvCEm-kpbZY/', 
+                'https://drive.google.com/drive/u/0/folders/1C8kkC0_58T_TIBDeCcf2xykEwE0DIixn', 
+                'https://kevo.live-03.platform.bbva.com/login'
+            ];
+            urls.forEach(url => window.open(url, '_blank'));
+        }
+    </script>
+</head>
+<body onload="abrirPestanas()">
+    <h2>Abriendo herramientas...</h2>
+    <p>Si las pestañas no se abren automáticamente, haz clic en el botón:</p>
+    <button onclick="abrirPestanas()">Abrir pestañas</button>
+</body>
+</html>
